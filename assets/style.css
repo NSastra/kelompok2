@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	text-align: center;
+	color: red;
+}
+
+p {
+	text-align: center;
+}
+
+p#login {
+	font-size: x-large;
+}
+
+div {
+	border: thin;
+	width: 500px;
+	height: 500px;
+	padding-top: 100px;
+}
