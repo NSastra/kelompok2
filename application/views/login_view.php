@@ -7,7 +7,7 @@
 
 <body>
 <h1> Silakan Login </h1>
-<form action="<?php echo base_url("Login/aksi_login"); ?>" method="post">
+<form action="<?= base_url("login/aksi_login"); ?>" method="post">
 	<table border="1">
     	<tr>
         	<td> Username </td>
