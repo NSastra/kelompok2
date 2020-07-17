@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Halaman Login</title>
+        <title>Autorisasi Akun</title>
         <link href="<?= base_url('assets/') ?>styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -20,17 +20,10 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                    <form action="<?= base_url("login/aksi_login"); ?>" method="post">
-                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Username</label><input class="form-control py-4" id="inputEmailAddress" name="username" type="text" placeholder="Enter Username" /></div>
-                                            <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" name="password" type="password" placeholder="Enter Password" /></div>
-                                            <div class="form-group">
-                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
-                                            </div>
-                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"><input type="submit" value="Login" /></div>
-                                        </form>
+                                    <p align="center" style="font-size:x-large;"> Username dan Password salah </p>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="<?= base_url("login/register"); ?>">Belum Punya Akun? Klik Di Sini Untuk Daftar</a></div>
+                                        <div class="small"><a href="<?= base_url("login/index"); ?>">Kembali ke halaman Login</a></div>   
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +35,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Kelompok 2 - SIKA 1 Semester 4 2020</div>
+                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

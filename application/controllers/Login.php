@@ -5,10 +5,18 @@ class Login extends CI_Controller {
 	public function __construct(){
 		parent:: __construct();
 		$this->load->model('Login_model');
+		$this->load->model('Jualbeli_model');
+		$this->load->helper('url');
 	}
 	
-	public function index(){
-		$this->load->view('login/login');
+	public function index(){	
+		$data['tbl_barang'] = $this->Jualbeli_model->view();
+		$this->load->view('login/login', $data);
+		
+	}
+
+	public function register(){
+		$this->load->view('login/daftar');
 	}
 	
 	public function aksi_login(){
@@ -19,7 +27,7 @@ class Login extends CI_Controller {
 					   'password' => ($password));
 		
 		$cek = $this->Login_model->cek_login("admin", $where)->num_rows();
-		var_dump($cek);
+		//var_dump($cek);
 		
 		if($cek > 0){
 			$data_session = array('nama' => $username,
@@ -30,7 +38,7 @@ class Login extends CI_Controller {
 		//$this->load->view("admin/view");
 		redirect("Admin");
 		} else {
-			echo "Username dan Password salah";
+			redirect("Incorrect");
 		}
 	}
 	

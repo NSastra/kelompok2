@@ -9,9 +9,13 @@ class Admin extends CI_Controller {
 		if($this->session->userdata('status') != "Login"){
 			redirect("login");
 		}
+		//$this->load->model('Jualbeli_model');
 	}
 	
 	public function index(){
+		//$data['tbl_barang'] = $this->Jualbeli_model->view();
 		$this->load->view("admin_view");
+
 	}
+	
 }

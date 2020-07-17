@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tables - SB Admin</title>
+        <title>Kelompok 2 - Situs Jual Beli</title>
         <link href="<?= base_url('assets/') ?>styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -89,7 +89,8 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        <?php echo $this->session->userdata("nama"); ?>
+                        <?php echo $this->session->userdata("nama"); ?> <br>
+                        <a href="<?php echo base_url('Login/logout'); ?>"> Logout </a>
                     </div>
                 </nav>
             </div>
@@ -111,35 +112,42 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th> </th>
+                                                <th>Nama Barang</th>
+                                                <th>Harga Barang (Rp)</th>
+                                                <th>Deskripsi</th>
+                                                <th> </th>
+                                                
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
+                                        <?php if(!empty($tbl_barang)){
+                                            
+                                        foreach($tbl_barang as $data){
+                                            ?>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
+                                                <td>  </td>
+                                                <td> <?php echo $data->nama_brg ?> </td>
+                                                <td> <?php echo $data->harga_brg ?> </td>
+                                                <td> <?php echo $data->deskripsi ?> </td>
+                                                <td> </td>
                                             </tr>
+
+                                        <?php } 
+                                            } ?>
                                             
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th> </th>
+                                                <th>Nama Barang</th>
+                                                <th>Harga Barang (Rp)</th>
+                                                <th>Deskripsi</th>
+                                                <th> </th>
+                                                
+                                            </tr>
+                                        </tfoot>
+                                       
                                     </table>
                                 </div>
                             </div>
@@ -149,7 +157,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                            <div class="text-muted">Copyright &copy; Kelompok 2 - SIKA 1 Semester 4 2020</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
