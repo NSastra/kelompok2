@@ -124,6 +124,9 @@
                                         <?php if(!empty($tbl_barang)){
                                             
                                         foreach($tbl_barang as $data){
+                                            $nama_brg = $data['nama_brg'];
+                                            $harga_brg = $data['harga_brg'];
+                                            $deskripsi = $data['deskripsi'];
                                             ?>
                                             <tr>
                                                 <td>  </td>
