@@ -18,6 +18,20 @@ class Login extends CI_Controller {
 	public function register(){
 		$this->load->view('login/daftar');
 	}
+
+	public function tambah_akun(){
+		$id = $this->input->post('id');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
+		$data = array(
+			'id' => $id,
+			'username' => $username,
+			'password' => $password
+		);
+		$this->Login_model->input_data($data, 'admin');
+		redirect('login/index');
+	}
 	
 	public function aksi_login(){
 		
